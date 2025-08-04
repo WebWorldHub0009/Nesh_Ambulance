@@ -1,6 +1,6 @@
 import React from "react";
 import { FiUserCheck, FiShield, FiPhoneCall } from "react-icons/fi";
-import bgImage from "../assets/home/ambulance.png";
+import bgImage from "../assets/showcase/s2.jpg";
 import { Link } from "react-router-dom";
 
 export default function WhyChooseUs() {

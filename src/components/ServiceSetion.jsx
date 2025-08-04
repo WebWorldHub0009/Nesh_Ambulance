@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import { FaAmbulance, FaHeartbeat, FaPlane, FaUserMd, FaClinicMedical, FaProcedures } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import img1 from "../assets/home/amb.jpeg";
+import img1 from "../assets/showcase/s8.jpg";
+import img2 from "../assets/advanced.jpg";
+import img3 from "../assets/air.jpg";
+import img4 from "../assets/freezer-van.jpg";
+import img5 from "../assets/emergency.jpg";
+import img6 from "../assets/showcase/s2.jpg";
 import bg from "../assets/home/bg.jpg"; 
 
 const ambulanceServices = [
@@ -17,31 +22,31 @@ const ambulanceServices = [
     icon: <FaAmbulance className="text-2xl text-[#8B0000]" />,
     title: "Advanced Life Support (ALS)",
     description: "Equipped with ICU setup for critical patients needing ventilators and monitors.",
-    imgSrc: img1,
+    imgSrc: img2,
   },
   {
     icon: <FaPlane className="text-2xl text-[#8B0000]" />,
     title: "Air Ambulance",
     description: "High-speed long-distance transfer with full medical team onboard.",
-    imgSrc: img1,
+    imgSrc: img3,
   },
   {
     icon: <FaProcedures className="text-2xl text-[#8B0000]" />,
     title: "Freezer Van",
     description: "Dead body freezer vans for dignified and temperature-controlled transport.",
-    imgSrc: img1,
+    imgSrc: img4,
   },
   {
     icon: <FaClinicMedical className="text-2xl text-[#8B0000]" />,
     title: "Patient Transport",
     description: "Scheduled transfers for check-ups, dialysis, or post-surgery transport.",
-    imgSrc: img1,
+    imgSrc: img5,
   },
   {
     icon: <FaUserMd className="text-2xl text-[#8B0000]" />,
     title: "Event Standby",
     description: "Medical teams & ambulance stationed at events or gatherings for emergencies.",
-    imgSrc: img1,
+    imgSrc: img6,
   },
 ];
 

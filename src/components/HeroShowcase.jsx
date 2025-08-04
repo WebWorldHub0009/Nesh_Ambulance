@@ -57,12 +57,12 @@ export default function HeroShowcase() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-[80vh] overflow-hidden bg-white">
+    <div className="relative w-full h-[85vh] overflow-hidden bg-white">
       {/* Background Images with overlay */}
       <AnimatePresence>
         <motion.div
