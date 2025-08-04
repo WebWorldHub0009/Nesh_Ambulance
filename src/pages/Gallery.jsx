@@ -25,22 +25,23 @@ const images = [
   img8, img9, img10, img11, img12, img13, img14, img15
 ];
 
+// Desktop/tablet custom spans
 const gridStyles = [
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-4 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-3 row-span-2",
-  "col-span-3 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-2",
-  "col-span-4 row-span-2",
-  "col-span-2 row-span-2"
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-4 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-3 sm:row-span-2",
+  "sm:col-span-3 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-4 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2"
 ];
 
 const Gallery = () => {
@@ -103,11 +104,12 @@ const Gallery = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-6 auto-rows-[150px] sm:auto-rows-[180px] md:auto-rows-[200px] lg:auto-rows-[220px] gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-6 auto-rows-[220px] sm:auto-rows-[150px] md:auto-rows-[180px] lg:auto-rows-[220px] gap-4">
           {images.map((img, i) => (
             <motion.div
               key={i}
-              className={`relative overflow-hidden cursor-pointer border border-gray-300 hover:border-red-600 shadow-lg hover:shadow-red-500/30 transition-all duration-300 group ${gridStyles[i]}`}
+              className={`relative overflow-hidden cursor-pointer border border-gray-300 hover:border-red-600 shadow-lg hover:shadow-red-500/30 transition-all duration-300 group 
+                col-span-1 ${gridStyles[i]}`}
               whileHover={{ scale: 1.03 }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -120,11 +122,7 @@ const Gallery = () => {
                 alt={`Gallery ${i + 1}`}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-                {/* <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                  View Image
-                </span> */}
-              </div>
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"></div>
             </motion.div>
           ))}
         </div>

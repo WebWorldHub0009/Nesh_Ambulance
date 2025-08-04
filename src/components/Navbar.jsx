@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io"; // Modern dropdown arrow
 import { Link } from "react-router-dom";
-import logo from "../assets/neshlogo.png"; // ✅ Add your logo file here
+import logo from "../assets/home/neshlogonew.png"; // ✅ Add your logo file here
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,25 +46,25 @@ export default function Navbar() {
     <header className="w-full">
       {/* Main Navbar */}
       <nav className="bg-white shadow-md relative">
-        <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4 py-3 md:py-4">
+        <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4 py-2 md:py-2">
           {/* ✅ Logo + Brand Name */}
           <div className="flex items-center gap-3">
             <Link to="/">
               <img
                 src={logo}
                 alt="Nesh Ambulance Logo"
-                className="h-10 w-auto md:h-12 object-contain"
+                className="h-14 w-auto md:h-16 object-contain"
               />
             </Link>
-            <div className="text-[#8B0000] text-2xl font-bold">NESH</div>
+            {/* <div className="text-[#8B0000] text-2xl font-bold">NESH</div> */}
           </div>
 
           {/* Center Nav Links (Desktop) */}
-          <ul className="hidden md:flex gap-6 text-red-900 font-semibold font-[italiana] relative">
+          <ul className="hidden md:flex gap-8 text-red-900 font-semibold  relative">
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className="group relative"
+                className="group relative text-lg"
                 onMouseEnter={() => link.dropdown && setServicesOpen(true)}
                 onMouseLeave={() => link.dropdown && setServicesOpen(false)}
               >
@@ -86,22 +86,25 @@ export default function Navbar() {
 
                 {/* Dropdown Menu */}
                 {link.dropdown && servicesOpen && (
-                  <ul
-                    className="absolute left-0 mt-0 bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 w-64 z-50 animate-fadeSlide"
-                  >
-                    {link.dropdown.map((sub, idx) => (
-                      <li key={idx}>
-                        <Link
-                          to={sub.path}
-                          className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-[#8B0000] hover:text-white transition"
-                        >
-                          {sub.icon}
-                          {sub.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+  <ul
+    className="absolute left-0 mt-0 bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 w-64 z-50 animate-fadeSlide"
+  >
+    {link.dropdown.map((sub, idx) => (
+      <li key={idx}>
+        <Link
+          to={sub.path}
+          className="group flex items-center gap-2 px-4 py-2 text-red-800 transition-all duration-300 ease-in-out hover:bg-white hover:text-red-800 hover:shadow-lg hover:shadow-black/40 hover:scale-[1.02] hover:translate-x-1"
+        >
+          <span className="transition-colors duration-300 group-hover:text-white">
+            {sub.icon}
+          </span>
+          {sub.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+)}
+
               </li>
             ))}
           </ul>
