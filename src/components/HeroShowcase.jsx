@@ -11,6 +11,7 @@ import {
 import img1 from "../assets/slider/amb1.png";
 import img2 from "../assets/slider/amb2.png";
 import img3 from "../assets/slider/amb3.png";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -125,9 +126,11 @@ export default function HeroShowcase() {
         <p className="text-[10px] sm:text-xs opacity-90">
           {slides[activeIndex].description}
         </p>
-        <button className="bg-white text-[#8B0000] hover:bg-gray-200 hover:shadow-lg px-2 sm:px-3 py-1.5 rounded-lg text-[10px] sm:text-sm font-semibold flex items-center gap-1 sm:gap-2 transition-all duration-300">
+        <Link to='/about'>
+        <button className="cursor-pointer bg-white text-[#8B0000] hover:bg-gray-200 hover:shadow-lg px-2 sm:px-3 py-1.5 rounded-lg text-[10px] sm:text-sm font-semibold flex items-center gap-1 sm:gap-2 transition-all duration-300">
           Learn More <FaChevronRight />
         </button>
+        </Link>
       </motion.div>
 
       {/* Thumbnails */}

@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io"; // Modern dropdown arrow
 import { Link } from "react-router-dom";
+import logo from "../assets/neshlogo.png"; // ✅ Add your logo file here
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,8 +47,17 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav className="bg-white shadow-md relative">
         <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4 py-3 md:py-4">
-          {/* Logo */}
-          <div className="text-[#8B0000] text-2xl font-bold">NESH</div>
+          {/* ✅ Logo + Brand Name */}
+          <div className="flex items-center gap-3">
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Nesh Ambulance Logo"
+                className="h-10 w-auto md:h-12 object-contain"
+              />
+            </Link>
+            <div className="text-[#8B0000] text-2xl font-bold">NESH</div>
+          </div>
 
           {/* Center Nav Links (Desktop) */}
           <ul className="hidden md:flex gap-6 text-red-900 font-semibold font-[italiana] relative">
@@ -74,7 +84,7 @@ export default function Navbar() {
                 </Link>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#8B0000] group-hover:w-full transition-all duration-300"></span>
 
-                {/* Dropdown Menu with fade+slide animation */}
+                {/* Dropdown Menu */}
                 {link.dropdown && servicesOpen && (
                   <ul
                     className="absolute left-0 mt-0 bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 w-64 z-50 animate-fadeSlide"
@@ -98,12 +108,16 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex gap-4">
-            <button className="bg-[#8B0000] hover:bg-[#a50f0f] text-white px-5 py-2 rounded-xl transition">
-              Book Now
-            </button>
-            <button className="border border-[#8B0000] hover:bg-[#8B0000] hover:text-white text-[#8B0000] px-5 py-2 rounded-xl transition">
-              Emergency
-            </button>
+            <Link to="/contact">
+              <button className="cursor-pointer bg-[#8B0000] hover:bg-[#a50f0f] text-white px-5 py-2 rounded-xl transition">
+                Get a Quote
+              </button>
+            </Link>
+            <Link to="/about">
+              <button className="cursor-pointer border border-[#8B0000] hover:bg-[#8B0000] hover:text-white text-[#8B0000] px-5 py-2 rounded-xl transition">
+                Our Story
+              </button>
+            </Link>
           </div>
 
           {/* Hamburger */}
@@ -132,7 +146,6 @@ export default function Navbar() {
             <div key={index}>
               {link.dropdown ? (
                 <>
-                  {/* Mobile Services Toggle */}
                   <button
                     onClick={() =>
                       setMobileServicesOpen((prev) => !prev)
@@ -149,7 +162,6 @@ export default function Navbar() {
                       }`}
                     />
                   </button>
-                  {/* Collapsible Dropdown */}
                   {mobileServicesOpen && (
                     <div className="pl-6 border-l border-gray-200 animate-fadeSlide">
                       {link.dropdown.map((sub, idx) => (
@@ -180,12 +192,16 @@ export default function Navbar() {
           ))}
         </div>
         <div className="px-4 mt-6">
-          <button className="w-full bg-[#8B0000] text-white py-2 rounded-lg mb-3 hover:bg-[#a50f0f] transition">
-            Book Now
-          </button>
-          <button className="w-full border border-[#8B0000] text-[#8B0000] py-2 rounded-lg hover:bg-[#8B0000] hover:text-white transition">
-            Emergency
-          </button>
+          <Link to="/contact">
+            <button className="cursor-pointer w-full bg-[#8B0000] text-white py-2 rounded-lg mb-3 hover:bg-[#a50f0f] transition">
+              Get a Quote
+            </button>
+          </Link>
+          <Link to="/about">
+            <button className="cursor-pointer w-full border border-[#8B0000] text-[#8B0000] py-2 rounded-lg hover:bg-[#8B0000] hover:text-white transition">
+              Our Story
+            </button>
+          </Link>
         </div>
       </div>
 

@@ -11,7 +11,8 @@ import {
   FaClock
 } from "react-icons/fa"; // ✅ FA5 icons, compatible everywhere
 import aboutImg1 from "../assets/slider/amb1.png";
-import aboutImg2 from "../assets/slider/amb2.png";
+import aboutImg2 from "../assets/showcase/s2.jpg";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
   return (
@@ -72,12 +73,14 @@ export default function AboutSection() {
               </li>
             </ul>
           </div>
+          <Link to='/services/emergency'>
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="mt-4 w-fit bg-gradient-to-r from-red-600 to-[#8B0000] text-white px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg hover:shadow-red-500/50 transition text-sm md:text-base relative z-10"
+            className="cursor-pointer mt-4 w-fit bg-gradient-to-r from-red-600 to-[#8B0000] text-white px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg hover:shadow-red-500/50 transition text-sm md:text-base relative z-10"
           >
             Explore <FaArrowRight />
           </motion.button>
+          </Link>
         </motion.div>
 
         {/* Right: Image */}

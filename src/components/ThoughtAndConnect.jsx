@@ -116,7 +116,7 @@ const AmbulanceInfo = () => {
               to="/contact"
               className="relative inline-block px-8 py-3 text-white bg-red-800 rounded-full text-base md:text-lg font-semibold group hover:bg-red-700 hover:scale-105 transition-all duration-500 shadow-lg"
             >
-              Book Now
+              Let's Connect
               <span className="absolute -inset-1 rounded-full border border-red-800/30 opacity-0 group-hover:opacity-100 transition"></span>
             </Link>
           </div>

@@ -45,7 +45,7 @@ const AboutSection = () => {
             call away. Dial <strong>📞 9971759200</strong> anytime.
           </p>
 
-          <Link to="/services">
+          <Link to="/services/emergency">
             <button className="cursor-pointer px-8 py-3 bg-[#8B0000] text-white font-semibold text-sm uppercase tracking-wide hover:bg-green-600 transition-all duration-300 rounded-full shadow-lg hover:shadow-2xl">
               View Services
             </button>

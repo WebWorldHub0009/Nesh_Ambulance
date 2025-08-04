@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaAmbulance, FaUserMd, FaHospital, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const stats = [
   {
@@ -81,9 +82,11 @@ export default function StatsSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <button className="bg-[#C62828] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#a71d1d] transition font-semibold">
-              Book Emergency Ambulance Now
+            <Link to='/gallery'>
+            <button className="cursor-pointer bg-[#C62828] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#a71d1d] transition font-semibold">
+              See Our Work
             </button>
+            </Link>
           </motion.div>
         </div>
       </section>

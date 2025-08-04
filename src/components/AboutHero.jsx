@@ -63,7 +63,7 @@ const AboutHero = () => {
               Contact Us <FaArrowRight />
             </a>
             <a
-              href="tel:9971759200"
+              href="tel:+919971759200"
               className="px-5 py-2.5 sm:px-6 sm:py-3 border-2 border-red-700 text-red-700 font-semibold rounded-full hover:bg-red-600 hover:text-white transition flex items-center justify-center gap-2 text-sm sm:text-base"
             >
               <FaPhoneAlt /> Call Now

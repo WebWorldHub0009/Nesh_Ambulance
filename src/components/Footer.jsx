@@ -9,13 +9,16 @@ import {
   FaImage,
   FaInfoCircle,
   FaAmbulance,
+  FaTwitter,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaCertificate,
 } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import bgImg from "../assets/abbg.avif";
-// import logo from "../assets/logo1.png";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
 
@@ -41,11 +44,7 @@ export default function Footer() {
       className="relative bg-cover bg-center bg-no-repeat text-[#F3F3F3] pt-20 pb-10 px-6 md:px-16 overflow-hidden font-sans font-semibold"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-  
-
- 
-
-      {/* 🔴 Medical Plus Watermark in a circle */}
+      {/* 🔴 Medical Plus Watermark */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
         <svg viewBox="0 0 100 100" className="w-[340px] h-[340px] opacity-5">
           <circle cx="50" cy="50" r="48" stroke="#8B0000" strokeWidth="5" fill="none" />
@@ -55,14 +54,16 @@ export default function Footer() {
           </g>
         </svg>
       </div>
+
       {/* Grid Content */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-sm">
         {/* About */}
         <div className="flex flex-col space-y-3">
-          {/* <img src={''} alt="Nesh Ambulance Logo" className="w-[100px] md:w-[150px]" /> */}
           <h4 className="font-bold mb-2 text-3xl text-[#8B0000] font-[italiana]">About Nesh Ambulance</h4>
           <p className="leading-relaxed text-gray-800">
-            Nesh Ambulance Service is committed to providing fast, reliable and professional 24/7 emergency transport. When every second counts, trust Nesh.
+            Nesh Ambulance Service is committed to providing fast, reliable, and professional 24/7 emergency transport. 
+            We ensure patient safety and comfort with trained staff, advanced equipment, and a dedication to timely service. 
+            When every second counts, trust Nesh for your medical transportation needs.
           </p>
           <div className="mt-4">
             <a
@@ -78,14 +79,15 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-bold text-2xl mb-4 text-[#8B0000]  font-[italiana]">Quick Links</h4>
+          <h4 className="font-bold text-2xl mb-4 text-[#8B0000] font-[italiana]">Quick Links</h4>
           <ul className="space-y-2 text-gray-800">
             {[
               ["Home", "/", <FaHome />],
-              ["Services", "/services", <FaAmbulance />],
+              ["About", "/about", <FaInfoCircle />],
+              ["Services", "/services/emergency", <FaAmbulance />],
               ["Gallery", "/gallery", <FaImage />],
-              ["About Us", "/about", <FaInfoCircle />],
               ["Contact", "/contact", <FaPhoneAlt />],
+              ["Documents", "/doc", <FaCertificate />],
             ].map(([text, link, icon], i) => (
               <li key={i}>
                 <Link
@@ -98,7 +100,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <h4 className="mt-6 font-bold text-2xl text-[#8B0000]  font-[italiana]">Emails</h4>
+          <h4 className="mt-6 font-bold text-2xl text-[#8B0000] font-[italiana]">Emails</h4>
           <ul className="mt-2 space-y-2 text-gray-800">
             <li>
               <a
@@ -114,18 +116,18 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="font-bold text-2xl mb-4 text-[#8B0000]  font-[italiana]">Our Services</h4>
+          <h4 className="font-bold text-2xl mb-4 text-[#8B0000] font-[italiana]">Our Services</h4>
           <ul className="space-y-2 text-gray-800">
             {[
-              "Emergency Ambulance",
-              "24/7 Patient Transport",
-              "ICU & Non-ICU Ambulance",
-              "Medical Staff Support",
-              "Interstate Transfers"
-            ].map((svc, i) => (
+              ["Emergency Ambulance", "/services/emergency"],
+              ["Patient Transport", "/services/transport"],
+              ["Event Medical Support", "/services/event-support"],
+              ["ICU Ambulance", "/services/icu"],
+              ["Air Ambulance", "/services/air"],
+            ].map(([svc, path], i) => (
               <li key={i}>
                 <Link
-                  to="/services"
+                  to={path}
                   className="hover:text-[#8B0000] transition duration-300"
                 >
                   {svc}
@@ -137,24 +139,27 @@ export default function Footer() {
 
         {/* Address & Contact */}
         <div>
-          <h4 className="font-bold text-2xl mb-4 text-[#8B0000]  font-[italiana]">Contact Info</h4>
+          <h4 className="font-bold text-2xl mb-4 text-[#8B0000] font-[italiana]">Contact Info</h4>
           <address className="not-italic leading-relaxed mb-4 text-gray-800">
             Plot No. 3467, Ground Floor, Shop No. 3,<br />
             Nearby Ankush Home, Huda Market,<br />
             Sector 23, Huda, Gurugram, Haryana 122017
           </address>
           <p className="text-xs text-gray-600 mb-2">
-            UDYAM-HR-05-0059315 | GST: 06BMLPL0470K1ZW
+            UDYAM-HR-05-0059315 <br /> GST: 06BMLPL0470K1ZW
           </p>
-          <div className="mb-4 flex justify-center items-center relative right-8">
+          <div className="mb-4 flex">
             <Translator />
+            <div className="w-38 md:w-16"></div>
           </div>
           <div className="mt-6 flex space-x-4">
-            {[FaInstagram, FaFacebookF, FaYoutube, FaSearchLocation].map((Icon, i) => (
-              <a key={i} href="#" className="text-[#8B0000] hover:text-[#228B22] transition">
-                <Icon size={20} />
-              </a>
-            ))}
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaInstagram size={20} /></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaFacebookF size={20} /></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaYoutube size={20} /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaTwitter size={20} /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaLinkedinIn size={20} /></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaPinterestP size={20} /></a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-[#8B0000] hover:text-[#228B22] transition"><FaSearchLocation size={20} /></a>
           </div>
         </div>
       </div>

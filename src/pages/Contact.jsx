@@ -67,7 +67,7 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://neshambulanceservice.in/thank-you"
+                value="https://neshambulanceservice.in/"
               />
 
               {/* Name & Email */}
