@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io"; // Modern dropdown arrow
 import { Link } from "react-router-dom";
-import logo from "../assets/home/neshlogonew.png"; // ✅ Add your logo file here
+import logo from "../assets/logo.png"; // ✅ Add your logo file here
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <header className="w-full">
       {/* Main Navbar */}
-      <nav className="bg-white shadow-md relative">
+      <nav className="bg-white shadow-md relative px-4">
         <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4 py-2 md:py-2">
           {/* ✅ Logo + Brand Name */}
           <div className="flex items-center gap-3">
@@ -53,7 +53,7 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="Nesh Ambulance Logo"
-                className="h-14 w-auto md:h-16 object-contain"
+                className="h-14 w-auto md:h-18 object-contain"
               />
             </Link>
             {/* <div className="text-[#8B0000] text-2xl font-bold">NESH</div> */}

@@ -92,7 +92,7 @@ export default function Footer() {
               <li key={i}>
                 <Link
                   to={link}
-                  className="flex items-center gap-2 hover:text-[#8B0000] transition duration-300"
+                  className="flex items-center gap-2 hover:text-[#000000] transition duration-300"
                 >
                   {icon} {text}
                 </Link>

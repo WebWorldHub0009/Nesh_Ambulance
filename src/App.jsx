@@ -13,6 +13,7 @@ import SingleService from "./pages/SingleService";
 // Ambulance data
 import { ambulanceServices } from "./data/ambulanceServices";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingButtons from "./components/FloatingButtons";
 
 const App = () => {
   return (
@@ -50,6 +51,7 @@ const App = () => {
         />
       </Routes>
       <Footer />
+      <FloatingButtons/>
     </BrowserRouter>
   );
 };
