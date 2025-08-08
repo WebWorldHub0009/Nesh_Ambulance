@@ -7,6 +7,13 @@ import eventImg from "../assets/showcase/s2.jpg";
 import icuImg from "../assets/newicu.jpg";
 import airImg from "../assets/air.jpg";
 
+// New service images (replace with actual paths later)
+import normalImg from "../assets/normal.avif";
+import oxygenImg from "../assets/oxygen.jpg";
+import deadTransportImg from "../assets/deadt.jpg";
+import freezerBoxImg from "../assets/freezer.jpg";
+
+
 export const ambulanceServices = [
   {
     id: 1,
@@ -77,5 +84,90 @@ export const ambulanceServices = [
     path: "/services/air",
     moreInfo:
       "Fully equipped with life-support systems, ICU facilities, and medical staff for emergency air evacuation across regions."
-  }
+  },
+  {
+    id: 6,
+    name: "Normal Ambulance",
+    rating: 4.6,
+    rentPerHour: 800,
+    refundableDeposit: 2000,
+    tenureOptions: [1, 3, 6],
+    description:
+      "Basic ambulance for non-emergency patient transport with essential facilities.",
+    image: normalImg,
+    path: "/services/normal",
+    moreInfo:
+      "Includes stretcher, basic first aid, and seating for attendants. Suitable for routine patient transfers."
+  },
+  {
+    id: 7,
+    name: "Oxygen Ambulance",
+    rating: 4.8,
+    rentPerHour: 1200,
+    refundableDeposit: 3000,
+    tenureOptions: [1, 3, 6],
+    description:
+      "Ambulance equipped with continuous oxygen supply for patients with breathing difficulties.",
+    image: oxygenImg,
+    path: "/services/oxygen",
+    moreInfo:
+      "Includes multiple oxygen cylinders, delivery masks, and trained staff to handle respiratory emergencies during transport."
+  },
+  {
+    id: 8,
+    name: "Dead Body Transport",
+    rating: 4.7,
+    rentPerHour: 1000,
+    refundableDeposit: 2500,
+    tenureOptions: [1, 3, 6],
+    description:
+      "Respectful and safe transport of deceased individuals to desired locations.",
+    image: deadTransportImg,
+    path: "/services/dead-transport",
+    moreInfo:
+      "Equipped with stretcher and privacy arrangements to ensure dignified handling of remains."
+  },
+  {
+    id: 9,
+    name: "Dead Body Freezer Box",
+    rating: 4.9,
+    rentPerHour: 1500,
+    refundableDeposit: 3500,
+    tenureOptions: [1, 3, 6],
+    description:
+      "Preservation service for deceased bodies using freezer boxes to prevent decomposition.",
+    image: freezerBoxImg,
+    path: "/services/freezer-box",
+    moreInfo:
+      "Provides temperature-controlled freezer boxes with delivery and setup at location."
+  },
+  // {
+  //   id: 10,
+  //   name: "Hospitals",
+  //   rating: 5.0,
+  //   rentPerHour: 0,
+  //   refundableDeposit: 0,
+  //   tenureOptions: [],
+  //   description:
+  //     "Tie-ups with leading hospitals for quick admission and coordinated care.",
+  //   image: hospitalImg,
+  //   path: "/services/hospitals",
+  //   moreInfo:
+  //     "Direct coordination with hospital emergency departments to ensure zero-delay patient admissions."
+  // },
+  // {
+  //   id: 11,
+  //   name: "Surgery",
+  //   rating: 4.9,
+  //   rentPerHour: 0,
+  //   refundableDeposit: 0,
+  //   tenureOptions: [],
+  //   description:
+  //     "Arrangements for specialized surgeries in partner hospitals.",
+  //   image: surgeryImg,
+  //   path: "/services/surgery",
+  //   moreInfo:
+  //     "Includes coordination with surgeons, operation theaters, and pre/post-surgery ambulance support."
+  // },
+  
 ];

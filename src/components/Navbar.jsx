@@ -13,6 +13,9 @@ import {
   FaCalendarCheck,
   FaProcedures,
   FaPlane,
+  FaLungs,
+  FaSnowflake,
+  FaHospital,
 } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io"; // Modern dropdown arrow
 import { Link } from "react-router-dom";
@@ -35,6 +38,10 @@ export default function Navbar() {
         { name: "Event Medical Support", path: "/services/event-support", icon: <FaCalendarCheck className="text-[#8B0000]" /> },
         { name: "ICU Ambulance", path: "/services/icu", icon: <FaProcedures className="text-[#8B0000]" /> },
         { name: "Air Ambulance", path: "/services/air", icon: <FaPlane className="text-[#8B0000]" /> },
+        { name: "Normal Ambulance", path: "/services/normal", icon: <FaAmbulance className="text-[#8B0000]" /> },
+  { name: "Oxygen Ambulance", path: "/services/oxygen", icon: <FaLungs className="text-[#8B0000]" /> }, // FaLungs from react-icons/fa
+  { name: "Dead Body Transport", path: "/services/dead-body-transport", icon: <FaUserInjured className="text-[#8B0000]" /> },
+  { name: "Dead Body Freezer Box", path: "/services/freezer-box", icon: <FaSnowflake className="text-[#8B0000]" /> },
       ],
     },
     { name: "Gallery", path: "/gallery", icon: <FaPhotoVideo /> },
@@ -113,7 +120,7 @@ export default function Navbar() {
           <div className="hidden md:flex gap-4">
             <Link to="/contact">
               <button className="cursor-pointer bg-[#8B0000] hover:bg-[#a50f0f] text-white px-5 py-2 rounded-xl transition">
-                Get a Quote
+                BOOK NOW
               </button>
             </Link>
             <Link to="/about">

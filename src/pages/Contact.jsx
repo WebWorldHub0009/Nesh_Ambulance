@@ -59,7 +59,7 @@ export default function Contact() {
           {/* Right Form */}
           <div className="px-8 py-12 md:w-1/2 w-full">
             <form
-              className="w-full"
+              className="w-full space-y-8"
               action="https://formsubmit.co/Info@neshambulanceservice.in"
               method="POST"
             >
@@ -70,8 +70,8 @@ export default function Contact() {
                 value="https://neshambulanceservice.in/"
               />
 
-              {/* Name & Email */}
-              <div className="flex flex-col md:flex-row gap-8 mb-8">
+              
+              <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1">
                   <label className="block text-lg text-gray-700 mb-2">Your Name</label>
                   <input
@@ -82,7 +82,20 @@ export default function Contact() {
                     className="w-full border-b-2 border-gray-300 focus:border-red-600 outline-none py-3 text-base"
                   />
                 </div>
-                <div className="flex-1">
+                <div>
+                <label className="block text-lg text-gray-700 mb-2">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="+91 9876543210"
+                  className="w-full border-b-2 border-gray-300 focus:border-red-600 outline-none py-3 text-base"
+                />
+              </div>
+              </div>
+
+              
+              <div className="flex-1">
                   <label className="block text-lg text-gray-700 mb-2">Your Email</label>
                   <input
                     type="email"
@@ -92,22 +105,9 @@ export default function Contact() {
                     className="w-full border-b-2 border-gray-300 focus:border-red-600 outline-none py-3 text-base"
                   />
                 </div>
-              </div>
-
-              {/* Subject */}
-              <div className="mb-8">
-                <label className="block text-lg text-gray-700 mb-2">Subject</label>
-                <input
-                  type="text"
-                  name="subject"
-                  required
-                  placeholder="Emergency, patient transfer, or enquiry"
-                  className="w-full border-b-2 border-gray-300 focus:border-red-600 outline-none py-3 text-base"
-                />
-              </div>
 
               {/* Message */}
-              <div className="mb-8">
+              <div>
                 <label className="block text-lg text-gray-700 mb-2">Message</label>
                 <textarea
                   rows="5"

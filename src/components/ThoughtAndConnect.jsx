@@ -84,7 +84,7 @@ const AmbulanceInfo = () => {
             reliable, and compassionate ambulance care right to your doorstep."
           </p>
           <p className="text-red-800 font-bold uppercase text-sm tracking-wide mb-2">
-            — Neeraj Yadav (Founder)
+            — Sunny Lata (Founder)
           </p>
           <div className="text-gray-700 text-sm md:text-base space-y-1 mt-3">
             <p className="flex items-center justify-center gap-2">

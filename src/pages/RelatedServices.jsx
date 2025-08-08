@@ -1,13 +1,23 @@
+// RelatedServices.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaAmbulance, FaHeartbeat } from "react-icons/fa";
+import { FaHeartbeat, FaAmbulance } from "react-icons/fa";
 import { ambulanceServices } from "../data/ambulanceServices";
+
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+// Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const RelatedServices = ({ currentServiceId }) => {
   const navigate = useNavigate();
 
-  // Filter out current service
+  // Remove current service
   const relatedServices = ambulanceServices.filter(
     (service) => service.id !== currentServiceId
   );
@@ -22,124 +32,78 @@ const RelatedServices = ({ currentServiceId }) => {
         </h3>
       </div>
 
-      {/* Desktop: Grid | Mobile: Horizontal Scroll */}
-      <div
-        className="
-          hidden md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4
-          gap-6 py-4 px-4
-        "
+      {/* Swiper Slider */}
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+          1280: { slidesPerView: 4 },
+        }}
+        className="pb-10"
       >
         {relatedServices.map((service, index) => (
-          <motion.div
-            key={service.id}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            className="flex flex-col justify-between bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all cursor-pointer"
-            onClick={() => navigate(service.path)}
-          >
-            {/* Image */}
-            <div className="relative h-44 w-full">
-              <img
-                src={service.image}
-                alt={service.name}
-                className="w-full h-full object-cover"
-              />
-              {/* <span className="absolute top-3 left-3 bg-[#8B0000] text-white px-3 py-1 text-xs font-medium rounded-full flex items-center gap-1 shadow-lg">
-                <FaAmbulance /> Ambulance
-              </span> */}
-            </div>
-
-            {/* Info */}
-            <div className="p-5 flex flex-col flex-1 justify-between">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 truncate">
-                  {service.name}
-                </h4>
-                <p className="text-sm text-gray-600 mt-2 line-clamp-2">
-                  {service.description}
-                </p>
-              </div>
-
-              <hr className="my-3 border-gray-200" />
-
-              {/* Price */}
-              <div className="flex items-center justify-between mt-auto">
-                <span className="flex items-center text-[#8B0000] text-sm font-medium gap-1">
-                  <FaHeartbeat /> ₹{service.rentPerHour}/hr
+          <SwiperSlide key={service.id}>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col justify-between bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all cursor-pointer"
+              onClick={() => navigate(service.path)}
+            >
+              {/* Image */}
+              <div className="relative h-44 w-full">
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-[#8B0000] text-white px-3 py-1 text-xs font-medium rounded-full flex items-center gap-1 shadow-lg">
+                  <FaAmbulance /> Ambulance
                 </span>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(service.path);
-                  }}
-                  className="px-3 py-1 bg-[#8B0000] text-white text-xs rounded-lg hover:bg-[#a50f0f] transition"
-                >
-                  View Details
-                </button>
               </div>
-            </div>
-          </motion.div>
+
+              {/* Info */}
+              <div className="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 truncate">
+                    {service.name}
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                    {service.description}
+                  </p>
+                </div>
+
+                <hr className="my-3 border-gray-200" />
+
+                {/* Price */}
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="flex items-center text-[#8B0000] text-sm font-medium gap-1">
+                    <FaHeartbeat /> ₹{service.rentPerHour}/hr
+                  </span>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(service.path);
+                    }}
+                    className="px-3 py-1 bg-[#8B0000] text-white text-xs rounded-lg hover:bg-[#a50f0f] transition"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </SwiperSlide>
         ))}
-      </div>
-
-      {/* Mobile: Horizontal Scroll */}
-      <div className="flex md:hidden gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory scroll-smooth">
-        {relatedServices.map((service, index) => (
-          <motion.div
-            key={service.id}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.4 }}
-            whileHover={{ scale: 1.02 }}
-            className="min-w-[90%] flex flex-col justify-between bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all cursor-pointer snap-center"
-            onClick={() => navigate(service.path)}
-          >
-            {/* Image */}
-            <div className="relative h-44 w-full">
-              <img
-                src={service.image}
-                alt={service.name}
-                className="w-full h-full object-cover"
-              />
-              <span className="absolute top-3 left-3 bg-[#8B0000] text-white px-3 py-1 text-xs font-medium rounded-full flex items-center gap-1 shadow-lg">
-                <FaAmbulance /> Ambulance
-              </span>
-            </div>
-
-            {/* Info */}
-            <div className="p-5 flex flex-col flex-1 justify-between">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 truncate">
-                  {service.name}
-                </h4>
-                <p className="text-sm text-gray-600 mt-2 line-clamp-2">
-                  {service.description}
-                </p>
-              </div>
-
-              <hr className="my-3 border-gray-200" />
-
-              {/* Price */}
-              <div className="flex items-center justify-between mt-auto">
-                <span className="flex items-center text-[#8B0000] text-sm font-medium gap-1">
-                  <FaHeartbeat /> ₹{service.rentPerHour}/hr
-                </span>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(service.path);
-                  }}
-                  className="px-3 py-1 bg-[#8B0000] text-white text-xs rounded-lg hover:bg-[#a50f0f] transition"
-                >
-                  View Details
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

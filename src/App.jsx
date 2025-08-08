@@ -18,7 +18,7 @@ import FloatingButtons from "./components/FloatingButtons";
 const App = () => {
   return (
     <BrowserRouter>
-    <ScrollToTop/>
+      <ScrollToTop />
       <Marquee24x7 />
       <Navbar />
       <Routes>
@@ -29,29 +29,20 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
 
         {/* Service Pages */}
-        <Route
-          path="/services/emergency"
-          element={<SingleService service={ambulanceServices[0]} />}
-        />
-        <Route
-          path="/services/transport"
-          element={<SingleService service={ambulanceServices[1]} />}
-        />
-        <Route
-          path="/services/event-support"
-          element={<SingleService service={ambulanceServices[2]} />}
-        />
-        <Route
-          path="/services/icu"
-          element={<SingleService service={ambulanceServices[3]} />}
-        />
-        <Route
-          path="/services/air"
-          element={<SingleService service={ambulanceServices[4]} />}
-        />
+        <Route path="/services/emergency" element={<SingleService service={ambulanceServices[0]} />} />
+        <Route path="/services/transport" element={<SingleService service={ambulanceServices[1]} />} />
+        <Route path="/services/event-support" element={<SingleService service={ambulanceServices[2]} />} />
+        <Route path="/services/icu" element={<SingleService service={ambulanceServices[3]} />} />
+        <Route path="/services/air" element={<SingleService service={ambulanceServices[4]} />} />
+
+        {/* Newly Added Services */}
+        <Route path="/services/normal" element={<SingleService service={ambulanceServices[5]} />} />
+        <Route path="/services/oxygen" element={<SingleService service={ambulanceServices[6]} />} />
+        <Route path="/services/dead-body-transport" element={<SingleService service={ambulanceServices[7]} />} />
+        <Route path="/services/freezer-box" element={<SingleService service={ambulanceServices[8]} />} />
       </Routes>
       <Footer />
-      <FloatingButtons/>
+      <FloatingButtons />
     </BrowserRouter>
   );
 };
