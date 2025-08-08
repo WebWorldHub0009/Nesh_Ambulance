@@ -26,7 +26,7 @@ const SingleService = ({ service }) => {
   return (
     <>
       {/* Service Details Section */}
-      <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12 items-stretch">
+      <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12 items-stretch shadow-sm">
         {/* Left - Image */}
         <div className="flex-1 flex justify-center items-stretch bg-red-600">
           <img
@@ -38,7 +38,7 @@ const SingleService = ({ service }) => {
 
         {/* Right - Details */}
         <div className="flex-1 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-2">{service.name}</h1>
+          <h1 className="text-3xl font-bold mb-2 font-[italiana]">{service.name}</h1>
 
           {/* Rating */}
           <div className="flex items-center mb-4 text-yellow-500">

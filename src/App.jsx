@@ -6,7 +6,7 @@ import Marquee24x7 from "./components/Marquee";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Certificates from "./pages/Certificates";
+
 import Gallery from "./pages/Gallery";
 import SingleService from "./pages/SingleService";
 
@@ -14,6 +14,7 @@ import SingleService from "./pages/SingleService";
 import { ambulanceServices } from "./data/ambulanceServices";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingButtons from "./components/FloatingButtons";
+import Events from "./pages/Events";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/doc" element={<Certificates />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/gallery" element={<Gallery />} />
 
         {/* Service Pages */}

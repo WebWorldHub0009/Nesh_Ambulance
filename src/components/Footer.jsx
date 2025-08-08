@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import bgImg from "../assets/abbg.avif";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
+import { FaBuildingColumns } from "react-icons/fa6";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -87,7 +88,7 @@ export default function Footer() {
               ["Services", "/services/emergency", <FaAmbulance />],
               ["Gallery", "/gallery", <FaImage />],
               ["Contact", "/contact", <FaPhoneAlt />],
-              ["Documents", "/doc", <FaCertificate />],
+              ["Events", "/events", <FaBuildingColumns />],
             ].map(([text, link, icon], i) => (
               <li key={i}>
                 <Link
@@ -124,6 +125,10 @@ export default function Footer() {
               ["Event Medical Support", "/services/event-support"],
               ["ICU Ambulance", "/services/icu"],
               ["Air Ambulance", "/services/air"],
+              ["Normal Ambulance", "/services/normal"],
+              ["Oxygen Ambulance", "/services/oxygen"],
+              ["Dead Body Transport", "/services/dead-body-transport"],
+              ["Dead Body Freeezer Box", "/services/freezer-box"],
             ].map(([svc, path], i) => (
               <li key={i}>
                 <Link

@@ -23,10 +23,10 @@ const RelatedServices = ({ currentServiceId }) => {
   );
 
   return (
-    <div className="mt-16 max-w-[1400px] mx-auto px-4">
+    <div className="mt-8 py-8 max-w-[1400px] mx-auto px-4">
       {/* Section Heading */}
       <div className="text-center mb-10">
-        <h3 className="text-2xl md:text-3xl font-bold text-[#8B0000] relative inline-block">
+        <h3 className="text-2xl md:text-3xl font-bold text-[#8B0000] relative inline-block font-[italiana]">
           Related Ambulance Services
           <span className="block w-20 h-1 bg-[#8B0000] mx-auto mt-2 rounded-full"></span>
         </h3>
@@ -38,7 +38,7 @@ const RelatedServices = ({ currentServiceId }) => {
         spaceBetween={20}
         slidesPerView={1}
         navigation
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
         breakpoints={{
@@ -66,9 +66,7 @@ const RelatedServices = ({ currentServiceId }) => {
                   alt={service.name}
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute top-3 left-3 bg-[#8B0000] text-white px-3 py-1 text-xs font-medium rounded-full flex items-center gap-1 shadow-lg">
-                  <FaAmbulance /> Ambulance
-                </span>
+                
               </div>
 
               {/* Info */}

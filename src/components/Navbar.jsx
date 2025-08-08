@@ -20,6 +20,7 @@ import {
 import { IoIosArrowDown } from "react-icons/io"; // Modern dropdown arrow
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"; // ✅ Add your logo file here
+import { FaBuildingColumns } from "react-icons/fa6";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function Navbar() {
     },
     { name: "Gallery", path: "/gallery", icon: <FaPhotoVideo /> },
     { name: "Contact", path: "/contact", icon: <FaPhone /> },
-    { name: "Docs", path: "/doc", icon: <FaToiletPaper /> },
+    { name: "Events", path: "/events", icon: <FaBuildingColumns /> },
   ];
 
   return (

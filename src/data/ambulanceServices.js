@@ -123,7 +123,7 @@ export const ambulanceServices = [
     description:
       "Respectful and safe transport of deceased individuals to desired locations.",
     image: deadTransportImg,
-    path: "/services/dead-transport",
+    path: "/services/dead-body-transport",
     moreInfo:
       "Equipped with stretcher and privacy arrangements to ensure dignified handling of remains."
   },
