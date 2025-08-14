@@ -129,6 +129,7 @@ export default function Footer() {
               ["Oxygen Ambulance", "/services/oxygen"],
               ["Dead Body Transport", "/services/dead-body-transport"],
               ["Dead Body Freeezer Box", "/services/freezer-box"],
+              ["End to End Cremation Support", "/services/cremation-support"],
             ].map(([svc, path], i) => (
               <li key={i}>
                 <Link

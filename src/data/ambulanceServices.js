@@ -12,7 +12,7 @@ import normalImg from "../assets/normal.avif";
 import oxygenImg from "../assets/oxygen.jpg";
 import deadTransportImg from "../assets/deadt.jpg";
 import freezerBoxImg from "../assets/freezer.jpg";
-
+import cremationImg from "../assets/cremation.jpg"; // New image for cremation support
 
 export const ambulanceServices = [
   {
@@ -141,33 +141,18 @@ export const ambulanceServices = [
     moreInfo:
       "Provides temperature-controlled freezer boxes with delivery and setup at location."
   },
-  // {
-  //   id: 10,
-  //   name: "Hospitals",
-  //   rating: 5.0,
-  //   rentPerHour: 0,
-  //   refundableDeposit: 0,
-  //   tenureOptions: [],
-  //   description:
-  //     "Tie-ups with leading hospitals for quick admission and coordinated care.",
-  //   image: hospitalImg,
-  //   path: "/services/hospitals",
-  //   moreInfo:
-  //     "Direct coordination with hospital emergency departments to ensure zero-delay patient admissions."
-  // },
-  // {
-  //   id: 11,
-  //   name: "Surgery",
-  //   rating: 4.9,
-  //   rentPerHour: 0,
-  //   refundableDeposit: 0,
-  //   tenureOptions: [],
-  //   description:
-  //     "Arrangements for specialized surgeries in partner hospitals.",
-  //   image: surgeryImg,
-  //   path: "/services/surgery",
-  //   moreInfo:
-  //     "Includes coordination with surgeons, operation theaters, and pre/post-surgery ambulance support."
-  // },
-  
+  {
+    id: 10,
+    name: "End to End Cremation Support",
+    rating: 5.0,
+    rentPerHour: 0,
+    refundableDeposit: 0,
+    tenureOptions: [],
+    description:
+      "Complete cremation assistance service covering all arrangements from body transport to final rites.",
+    image: cremationImg,
+    path: "/services/cremation-support",
+    moreInfo:
+      "Includes ambulance or hearse van for body transport, arrangement of cremation ground or electric crematorium, provision of necessary items for rituals, and assistance with documentation. Designed to provide compassionate, hassle-free support for grieving families."
+  }
 ];

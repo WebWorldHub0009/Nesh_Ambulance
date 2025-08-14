@@ -16,9 +16,9 @@ import img9 from "../assets/showcase/s9.jpg";
 import img10 from "../assets/showcase/s10.jpg";
 import img11 from "../assets/showcase/s11.jpg";
 import img12 from "../assets/showcase/s12.jpg";
-import img13 from "../assets/showcase/s14.jpg";
-import img14 from "../assets/showcase/s15.jpg";
-import img15 from "../assets/showcase/s16.jpg";
+import img13 from "../assets/newGallery/g1.jpg";
+import img14 from "../assets/newGallery/g3.jpg";
+import img15 from "../assets/newGallery/g2.jpg";
 
 const images = [
   img1, img2, img3, img4, img5, img6, img7,
@@ -27,21 +27,21 @@ const images = [
 
 // Desktop/tablet custom spans
 const gridStyles = [
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-4 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-3 sm:row-span-2",
-  "sm:col-span-3 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-4 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-2"
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-4 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-3 sm:row-span-1",
+  "sm:col-span-3 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-4 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1"
 ];
 
 const Gallery = () => {
@@ -104,7 +104,7 @@ const Gallery = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-6 auto-rows-[220px] sm:auto-rows-[150px] md:auto-rows-[180px] lg:auto-rows-[220px] gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-6 auto-rows-[220px] sm:auto-rows-[150px] md:auto-rows-[180px] lg:auto-rows-[360px] gap-4">
           {images.map((img, i) => (
             <motion.div
               key={i}

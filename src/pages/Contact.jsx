@@ -100,7 +100,6 @@ export default function Contact() {
                   <input
                     type="email"
                     name="email"
-                    required
                     placeholder="you@example.com"
                     className="w-full border-b-2 border-gray-300 focus:border-red-600 outline-none py-3 text-base"
                   />

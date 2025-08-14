@@ -20,7 +20,7 @@ import {
 import { IoIosArrowDown } from "react-icons/io"; // Modern dropdown arrow
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"; // ✅ Add your logo file here
-import { FaBuildingColumns } from "react-icons/fa6";
+import { FaBuildingColumns, FaFireBurner, FaFireFlameCurved, FaFireFlameSimple } from "react-icons/fa6";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,6 +43,7 @@ export default function Navbar() {
   { name: "Oxygen Ambulance", path: "/services/oxygen", icon: <FaLungs className="text-[#8B0000]" /> }, // FaLungs from react-icons/fa
   { name: "Dead Body Transport", path: "/services/dead-body-transport", icon: <FaUserInjured className="text-[#8B0000]" /> },
   { name: "Dead Body Freezer Box", path: "/services/freezer-box", icon: <FaSnowflake className="text-[#8B0000]" /> },
+  { name: "End to End Cremation Support", path: "/services/cremation-support", icon: <FaFireFlameCurved className="text-[#8B0000]" /> },
       ],
     },
     { name: "Gallery", path: "/gallery", icon: <FaPhotoVideo /> },

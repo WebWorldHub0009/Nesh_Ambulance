@@ -41,6 +41,7 @@ const App = () => {
         <Route path="/services/oxygen" element={<SingleService service={ambulanceServices[6]} />} />
         <Route path="/services/dead-body-transport" element={<SingleService service={ambulanceServices[7]} />} />
         <Route path="/services/freezer-box" element={<SingleService service={ambulanceServices[8]} />} />
+        <Route path="/services/cremation-support" element={<SingleService service={ambulanceServices[9]} />} />
       </Routes>
       <Footer />
       <FloatingButtons />
