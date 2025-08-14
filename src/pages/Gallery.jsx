@@ -19,10 +19,13 @@ import img12 from "../assets/showcase/s12.jpg";
 import img13 from "../assets/newGallery/g1.jpg";
 import img14 from "../assets/newGallery/g3.jpg";
 import img15 from "../assets/newGallery/g2.jpg";
+import img16 from "../assets/showcase/s19.jpg";
+import img17 from "../assets/showcase/s20.jpg";
+import img18 from "../assets/showcase/s21.jpg";
 
 const images = [
   img1, img2, img3, img4, img5, img6, img7,
-  img8, img9, img10, img11, img12, img13, img14, img15
+  img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18
 ];
 
 // Desktop/tablet custom spans
@@ -41,6 +44,9 @@ const gridStyles = [
   "sm:col-span-2 sm:row-span-1",
   "sm:col-span-2 sm:row-span-1",
   "sm:col-span-4 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
   "sm:col-span-2 sm:row-span-1"
 ];
 
